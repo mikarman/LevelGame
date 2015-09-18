@@ -7,8 +7,6 @@ public class Doormat implements Drawable {
 	@Override
 	public void draw() {
 		System.out.print('_');
-	}
-	
-	
+	}	
 
 }
