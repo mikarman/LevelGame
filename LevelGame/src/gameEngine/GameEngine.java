@@ -234,7 +234,7 @@ public class GameEngine {
 	 * Completes the game play for one level.
 	 * During each round, the board is displayed, the player enters a movement
 	 * option, the player's location is updated, then the player interacts with
-	 * any pieces in the interactingPieces list. Moveable piece locations are then 
+	 * any pieces in the interactingPieces list. Movable piece locations are then 
 	 * updated for the next round. This continues until the level is finished. 
 	 */
 	public void doOneLevel() {
