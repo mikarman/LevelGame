@@ -15,5 +15,9 @@ public class LocationAwarePiece {
 		return location;
 	}
 	
+	public void setLocation(int i)
+	{
+		location = i;
+	}
 
 }

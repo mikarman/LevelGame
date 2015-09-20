@@ -1,8 +1,9 @@
 package levelPieces;
 
 import gameEngine.Drawable;
+import gameEngine.Moveable;
 
-public class Doormat extends LocationAwarePiece implements Drawable {
+public class Doormat extends LocationAwarePiece implements Moveable {
 
 	
 	public Doormat(int position) {
@@ -13,6 +14,13 @@ public class Doormat extends LocationAwarePiece implements Drawable {
 	@Override
 	public void draw() {
 		System.out.print('_');
+	}
+
+	@Override
+	public void move(Drawable[] pieces, int playerLocation) {
+		// TODO Auto-generated method stub
+		pieces[super.getLocation()] = this;
+		
 	}	
 
 }

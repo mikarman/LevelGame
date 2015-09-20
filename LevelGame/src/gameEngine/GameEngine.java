@@ -144,7 +144,7 @@ public class GameEngine {
 	 * @return true if the option is valid (within bounds), false otherwise
 	 */
 	public boolean updatePlayerLocation(int option) {
-		if (option == 1 && playerLocation < (pieces.length-2)) {
+		if (option == 1 && playerLocation < (pieces.length - 1)) {
 			playerLocation++;
 			return true;
 		}
@@ -172,7 +172,7 @@ public class GameEngine {
 	 */
 	public void movePieces() {
 		for (Moveable piece : movingPieces) {
-			piece.move(pieces, playerLocation);		
+			piece.move(pieces, playerLocation);
 		}	
 	}
 
