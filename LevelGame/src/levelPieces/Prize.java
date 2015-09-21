@@ -47,7 +47,7 @@ public class Prize extends LocationAwarePiece implements Moveable, InteractingPi
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub
-		
+		System.out.print(look);
 	}
 
 	
