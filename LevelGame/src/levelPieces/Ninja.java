@@ -8,17 +8,16 @@ import java.lang.Math;
 
 public class Ninja extends LocationAwarePiece implements Moveable, InteractingPiece  {
 
-	boolean hideJutsu = false;
+	boolean hideJutsu;
 	
 	public Ninja(int position) {
 		super(position);
-		// TODO Auto-generated constructor stub
+		hideJutsu = false;
 	}
 
 
 	@Override
 	public void draw() {
-		// TODO Auto-generated method stub
 		if (hideJutsu == false)
 		{
 			System.out.print('N');
@@ -33,7 +32,6 @@ public class Ninja extends LocationAwarePiece implements Moveable, InteractingPi
 	
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
 		final int visiRange = 2;
 		if (Math.abs(playerLocation - super.getLocation()) > visiRange)
 		{
@@ -54,12 +52,11 @@ public class Ninja extends LocationAwarePiece implements Moveable, InteractingPi
 
 	@Override
 	public void move(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
 		int loc = super.getLocation();
 		final int Ninjump = 3;
 		if (Math.abs(loc - playerLocation) > Ninjump)
 		{
-			if (pieces[loc] instanceof Ninja)
+			if (pieces[loc].equals(this))
 			{
 				pieces[loc] = null;
 			}

@@ -5,29 +5,35 @@ import gameEngine.InteractingPiece;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 
-public class Portal extends LocationAwarePiece implements Drawable, Moveable, InteractingPiece {
+public class Portal extends RandomMotionPiece implements Drawable, Moveable, InteractingPiece {
 
 	public Portal(int position) {
 		super(position);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public InteractionResult interact(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
-		return null;
+		if (super.getLocation() == playerLocation)
+		{
+			System.out.print("advan");
+			return InteractionResult.ADVANCE;
+		}
+		return InteractionResult.NONE;
 	}
 
 	@Override
 	public void move(Drawable[] pieces, int playerLocation) {
-		// TODO Auto-generated method stub
-		
+		int loc = super.getLocation();
+		if (pieces[loc].equals(this))
+		{
+			pieces[loc] = null;
+		}
+		super.move(pieces, playerLocation);
 	}
 
 	@Override
 	public void draw() {
-		// TODO Auto-generated method stub
-		
+		System.out.print('@');
 	}
 	
 

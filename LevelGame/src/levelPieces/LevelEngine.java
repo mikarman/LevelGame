@@ -38,8 +38,21 @@ public class LevelEngine {
 				drawnPieces[19] = hyaa;
 				movingPieces.add(hyaa);
 				interactingPieces.add(hyaa);
+				Portal stargate = new Portal(8);
+				drawnPieces[8] = stargate;
+				movingPieces.add(stargate);
+				interactingPieces.add(stargate);
+				Sniper wolf = new Sniper(1);
+				drawnPieces[1] = wolf;
+				movingPieces.add(wolf);
+				interactingPieces.add(wolf);
+				Sniper eagleEye = new Sniper(20);
+				drawnPieces[20] = eagleEye;
+				movingPieces.add(eagleEye);
+				interactingPieces.add(eagleEye);
 				break;
 			default:
+				System.out.println("You have entered Nirvana, an empty space of absolute tranquility");
 				break;
 		}
 	}
